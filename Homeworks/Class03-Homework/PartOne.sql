@@ -15,11 +15,3 @@ SELECT * FROM Employees
 WHERE Gender = 'M'
 ORDER BY HireDate DESC
 GO
-
-
-
-
-
-
-
-
