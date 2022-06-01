@@ -1,0 +1,45 @@
+USE JOINEXAMPLE
+GO
+DROP DATABASE IF EXISTS JOINEXAMPLE
+GO
+CREATE DATABASE JOINEXAMPLE
+GO
+
+DROP TABLE IF EXISTS TableA
+DROP TABLE IF EXISTS TableB
+GO
+
+CREATE TABLE TableA(IdA int, [Name] nvarchar(50))
+CREATE TABLE TableB(IdB int,[Name] nvarchar(50))
+GO
+
+INSERT INTO TableA VALUES (1, 'Martin'),(2, 'Alex')
+INSERT INTO TableB VALUES (2, 'Marija'),(3, 'Stefan')
+GO
+
+SELECT * FROM TableA
+SELECT * FROM TableB
+
+-- INNER JOIN*
+SELECT * FROM TableA ta
+INNER JOIN TableB tb ON ta.IdA = tb.IdB
+
+-- LEFT JOIN*
+SELECT * FROM TableA ta
+LEFT JOIN TableB tb ON ta.IdA = tb.IdB
+
+--RIGHT JOIN
+SELECT * FROM TableA ta
+RIGHT JOIN TableB tb ON ta.IdA = tb.IdB
+
+--FULL JOIN
+SELECT * FROM TableA ta
+FULL JOIN TableB tb ON ta.IdA = tb.IdB
+
+--CROSS JOIN
+SELECT * FROM TableA 
+CROSS JOIN TableB
+
+--OUTER JOIN
+SELECT * FROM TableA ta
+FULL OUTER JOIN TableB tb ON ta.IdA = tb.IdB
