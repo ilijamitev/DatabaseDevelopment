@@ -5,6 +5,8 @@ GO
 SELECT cu.[Name] AS CustomerName, pr.[Name] AS ProductName FROM Customers cu, Products pr
 ORDER BY cu.[Name]
 
+SELECT cu.[Name] AS CustomerName, pr.[Name] AS ProductName FROM Customers cu
+CROSS JOIN Products pr
 
 --List all Business Entities that has any order 
 --ALTER TABLE Orders

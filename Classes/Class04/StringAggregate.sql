@@ -1,0 +1,14 @@
+USE SEDC
+GO
+
+SELECT  STRING_AGG([Name],', ') FROM Customers
+SELECT  STRING_AGG(TotalPrice,', ') FROM Orders
+
+-- GETDATE + CAST
+SELECT GETDATE() AS DateAndTime
+SELECT CAST(GETDATE() AS DATE) AS OnlyTheDate
+
+
+
+
+
